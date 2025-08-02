@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>نظام البحث</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            margin: 10px;
+        }
+        .result-table {
+            margin: 0 auto;
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        .result-table th, .result-table td {
+            border: 1px solid #333;
+            padding: 8px;
+        }
+        .result-table th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>ابحث عن الاسم</h2>
+    <form method="POST">
+        <input type="text" name="search" placeholder="اكتب الاسم">
+        <input type="submit" value="بحث">
+    </form>
+    <div>{{ result|safe }}</div>
+</body>
+</html>
